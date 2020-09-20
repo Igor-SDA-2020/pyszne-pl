@@ -5,11 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pyszne.pl</title>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
-    
+    <h1 style="text-align: center;">
+        Pyszne PL
+    </h1>
+    <div class="all-view" id="main-div">
+        <select name="" id="pizza" class="margin-bottom">
+            <option value="0">-</option>
+            <option value="1">Margerita</option>
+            <option value="2">Pepperoni</option>
+            <option value="3">Wiejska</option>
+            <option value="4">Hawajska</option>
+        </select>
+        <div>
+            <input type="checkbox" id="pomidorowy" name="pomidorowy" class="margin-bottom" sosy>
+            <label for="pomidorowy">Pomidorowy</label>
+            <input type="checkbox" id="czosnkowy" name="czosnkowy" class="margin-bottom">
+            <label for="czosnkowy">Czosnkowy</label>
+            <input type="checkbox" id="ostryPomidorowy" name="ostryPomidorowy" clas="margin-bottom">
+            <label for="ostryPomidorowy">Ostry Pomidorowy</label>
+        </div>
+        <input type="text" name="nameC" class="margin-bottom" placeholder="Imię i Nazwisko">
+        <br>
+        <input type="email" name="email" class="margin-bottom" id="email" placeholder="Podaj Email">
+        <br>
+        <input type="tel" name="tel" class="margin-bottom" id="tel" placeholder="Nr telefonu">
+        <br>
+        <input type="address" name="address" class="margin-bottom" id="address" placeholder="Adres">
+        <br>
+        <textarea name="msg" id="msg" cols="30" rows="10" class="margin-bottom"
+            placeholder="wiadomość dla kucharza"></textarea>
+        <br>
+        <button class="btn margin-bottom" id="id-btn">Zamów</button>
+
+
+    </div>
+    <script src="../js/main.js"></script>
+
 </body>
 
 

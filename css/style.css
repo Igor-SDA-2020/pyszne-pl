@@ -1,0 +1,23 @@
+/* font-family: 'Roboto Condensed', sans-serif; */
+
+
+body {
+    background-color: whitesmoke;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.all-view {
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+.margin-bottom {
+    margin-bottom: 1rem;
+}
+
+input:hover {
+    border: 1px solid blueviolet;
+}
