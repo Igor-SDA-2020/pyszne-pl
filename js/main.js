@@ -1,25 +1,48 @@
-/ const mainBtn = document.getElementsByClassName('btn');
-// console.log("mainBtn button po klasie", mainBtn)
-// const input = document.getElementsByClassName('margin-bottom');
-// console.log("input po klasie", input)
 const idBtn = document.getElementById('id-btn');
-let btn = document.createElement("button");
-btn.setAttribute('class', 'fun')
-btn.innerText = "click me"
-console.log(btn)
-const maindiv = document.getElementById('main-div')
-maindiv.appendChild(btn)
-let span = document.createElement('span')
-span.innerText = "<button> hi hi </button>"
-let span2 = document.createElement('span')
-span2.innerHTML = " hi hi jestem inner Html"
-maindiv.appendChild(span)
-maindiv.appendChild(span2)idBtn.addEventListener("click", takeOrder)function takeOrder() {
+let order = {
+    pizza: '',
+    sosy: [],
+    name: '',
+    address: '',
+    email: '',
+    tel: '',
+    text: ''
+}
+idBtn.addEventListener("click", takeOrder)
+function takeOrder() {
     sprawdzanieSosow("sosy")
-    const pomidorowy = document.getElementById('pomidorowy')
-    const czosnkowy = document.getElementById('czosnkowy')
-    const ostryPomidorowy = document.getElementById('ostryPomidorowy')}
-console.log(btn)
+    const pomidorowy = document.getElementById('pomidorowy').checked
+    const czosnkowy = document.getElementById('czosnkowy').checked
+    const ostryPomidorowy = document.getElementById('ostryPomidorowy').checked
+    order.sosy = [pomidorowy, czosnkowy, ostryPomidorowy]
+    // albo:
+    // order.sosy.push(pomidorowy)
+    // order.sosy.push(czosnkowy)
+    // order.sosy.push(ostryPomidorowy)    
+    
+    // pobieram imię i nazwisko z input 
+    const nameC = document.getElementById('nameC').value
+    order.name = nameC
+    // pobieram email z input
+    const email = document.getElementById('email').value
+    order.email = email
+    // pobieram telefon z input
+    const tel = document.getElementById('tel')
+    order.tel = tel
+    // pobieram address
+    const address = document.getElementById('address')
+    order.address = address
+    const msg = document.getElementById('msg').value
+    order.text = msg
+    console.log("tekeOrder -> nameC", order)
+
+    let aa = ["Igor", "Khrystyna", "Roman"]
+    aa.push
+
+
+
+    console.log("takeOrder -> aa", aa)
+}
 function sprawdzanieSosow(nazwaKlasy) {
     const pobraneWszytkieSosyZinputu = document.getElementsByClassName(nazwaKlasy)
     for (let i = 0; i < pobraneWszytkieSosyZinputu.length; i++) {
@@ -28,7 +51,9 @@ function sprawdzanieSosow(nazwaKlasy) {
             console.log(pobraneWszytkieSosyZinputu[i].attributes)
         }
     }
-}// function dodawanie(a, b) {
+}
+
+// function dodawanie(a, b) {
 //     let wynik = a + b
 //     console.log(wynik)
 // }
